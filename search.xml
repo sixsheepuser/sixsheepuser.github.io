@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>Hello World</title>
+    <url>/2022/02/05/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Spring笔记</title>
+    <url>/2022/02/06/Spring%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<hr>
+<h3 id="1-Spring的开发步骤"><a href="#1-Spring的开发步骤" class="headerlink" title="1.Spring的开发步骤"></a>1.Spring的开发步骤</h3><p>1.导入坐标（pom.xml配置）</p>
+<p>2.创建Bean（实现对象和方法）</p>
+<p>3.创建applicatonContext.xml</p>
+<p>4.在配置文件中进行配置（配置bean）</p>
+<p>5.创建ApplicationContext对象getBean，通过getBean传递ID创建对象并调用方法。</p>
+<h3 id="2-Spring的配置文件"><a href="#2-Spring的配置文件" class="headerlink" title="2.Spring的配置文件"></a>2.Spring的配置文件</h3><h4 id="2-1Bean标签的常用属性"><a href="#2-1Bean标签的常用属性" class="headerlink" title="2.1Bean标签的常用属性"></a>2.1Bean标签的常用属性</h4><p>1.id（bean的唯一标识，IoC容器中bean的id不能重复）</p>
+<p>2.class</p>
+<p>3.scope属性（作用范围）</p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>singleton</td>
+<td>(默认值)单例的，每次通过getBean()获取的。</td>
+</tr>
+<tr>
+<td>prototype</td>
+<td>多例的，每次调用getBean()时都会创建一个新的bean实例。</td>
+</tr>
+</tbody></table>
+]]></content>
+      <categories>
+        <category>Spring</category>
+      </categories>
+      <tags>
+        <tag>Spring</tag>
+        <tag>后端</tag>
+      </tags>
+  </entry>
+</search>
