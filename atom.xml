@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-02-08T06:03:39.121Z</updated>
+  <updated>2022-02-08T06:14:57.324Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://example.com/2022/02/08/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E5%8F%8A%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/"/>
     <id>http://example.com/2022/02/08/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E5%8F%8A%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</id>
     <published>2022-02-08T03:53:52.000Z</published>
-    <updated>2022-02-08T06:03:39.121Z</updated>
+    <updated>2022-02-08T06:14:57.324Z</updated>
     
     
     <summary type="html">&lt;p&gt;假期在家的时候，想着学习之余搞个博客玩玩，就用Hexo搭建了个博客，其中遇到的一些问题和解决方案和大家分享交流一下！&lt;/p&gt;</summary>
@@ -33,7 +33,9 @@
     
     <category term="Hexo" scheme="http://example.com/tags/Hexo/"/>
     
-    <category term="博客搭建 - NexT" scheme="http://example.com/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA-NexT/"/>
+    <category term="博客搭建" scheme="http://example.com/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+    <category term="NexT" scheme="http://example.com/tags/NexT/"/>
     
   </entry>
   
