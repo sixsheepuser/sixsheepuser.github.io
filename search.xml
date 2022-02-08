@@ -55,4 +55,61 @@
         <tag>后端</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Hexo博客搭建及相关问题</title>
+    <url>/2022/02/08/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E5%8F%8A%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<p>假期在家的时候，想着学习之余搞个博客玩玩，就用Hexo搭建了个博客，其中遇到的一些问题和解决方案和大家分享交流一下！</p>
+<span id="more"></span>
+
+<hr>
+<h3 id="Hexo搭建博客"><a href="#Hexo搭建博客" class="headerlink" title="Hexo搭建博客"></a>Hexo搭建博客</h3><p>首先简单的说一下，Hexo博客的搭建的流程，我是跟着程序羊搭的，想要了解的可以去B站搜索。博客使用主题为NexT。</p>
+<h4 id="问题一：Git报错解决：OpenSSL-SSL-read-Connection-was-reset-errno-10054"><a href="#问题一：Git报错解决：OpenSSL-SSL-read-Connection-was-reset-errno-10054" class="headerlink" title="问题一：Git报错解决：OpenSSL SSL_read: Connection was reset, errno 10054"></a>问题一：Git报错解决：OpenSSL SSL_read: Connection was reset, errno 10054</h4><p>解决方案：输入下方代码即可解决</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git config --global http.sslVerify &quot;false&quot;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="问题二：-hexo使用theme出现“extends-‘-layout-swig‘-import-‘-macro-x2F-post-swig‘-as-post-template-“问题"><a href="#问题二：-hexo使用theme出现“extends-‘-layout-swig‘-import-‘-macro-x2F-post-swig‘-as-post-template-“问题" class="headerlink" title="问题二： hexo使用theme出现“extends ‘_layout.swig‘  import ‘_macro&#x2F;post.swig‘ as post_template “问题"></a>问题二： hexo使用theme出现“extends ‘_layout.swig‘  import ‘_macro&#x2F;post.swig‘ as post_template “问题</h4><p>原因：hexo在5.0后把swig删除了，需要自行手动安装</p>
+<p>解决方案：安装一下就可以了</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm i hexo-render-swig</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="问题三：NexT主题中头像没有显示"><a href="#问题三：NexT主题中头像没有显示" class="headerlink" title="问题三：NexT主题中头像没有显示"></a>问题三：NexT主题中头像没有显示</h4><p>（例：图片放在主题的next&#x2F;source&#x2F;images）下，图片名称为header.jpg</p>
+<p>解决方案：在主题的配置文件里找到avatar，在后面属性设置</p>
+<figure class="highlight arcade"><table><tr><td class="code"><pre><span class="line">avatar: <span class="regexp">/./im</span>ages/header.jpg</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="问题四：-NexT主题Cannot-GET-x2F-tags-x2F-20-x2F"><a href="#问题四：-NexT主题Cannot-GET-x2F-tags-x2F-20-x2F" class="headerlink" title="问题四： NexT主题Cannot GET&#x2F;tags&#x2F;%20&#x2F;"></a>问题四： NexT主题Cannot GET&#x2F;tags&#x2F;%20&#x2F;</h4><p>解决方案：将||前的空格删除即可，如下图</p>
+<p><img src="/../img/%E5%8D%9A%E5%AE%A2%E9%97%AE%E9%A2%985.png" alt="博客问题5"></p>
+<h4 id="问题五：NexT主题中分类，标签，关于不能正常转跳"><a href="#问题五：NexT主题中分类，标签，关于不能正常转跳" class="headerlink" title="问题五：NexT主题中分类，标签，关于不能正常转跳"></a>问题五：NexT主题中分类，标签，关于不能正常转跳</h4><p>问题说明：主题中没有生成对应的文件</p>
+<p>解决方案：</p>
+<p>1.生成文件：</p>
+<figure class="highlight haxe"><table><tr><td class="code"><pre><span class="line">hexo <span class="keyword">new</span> <span class="type">page</span> <span class="string">&quot;about&quot;</span></span><br><span class="line">hexo <span class="keyword">new</span> <span class="type">page</span> <span class="string">&quot;tags&quot;</span></span><br><span class="line">hexo <span class="keyword">new</span> <span class="type">page</span> <span class="string">&quot;categories&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>2.在source中找到”about“，“tags”，“categories”文件并编辑其中的index.md文件，格式如下</p>
+<figure class="highlight apache"><table><tr><td class="code"><pre><span class="line"><span class="attribute">title</span>: 关于</span><br><span class="line"><span class="attribute">date</span>: <span class="number">2022</span>-<span class="number">02</span>-<span class="number">07</span> <span class="number">18</span>:<span class="number">54</span>:<span class="number">44</span></span><br><span class="line"><span class="attribute">type</span>: <span class="string">&quot;about&quot;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight apache"><table><tr><td class="code"><pre><span class="line"><span class="attribute">title</span>: 标签</span><br><span class="line"><span class="attribute">date</span>: <span class="number">2022</span>-<span class="number">02</span>-<span class="number">07</span> <span class="number">18</span>:<span class="number">54</span>:<span class="number">44</span></span><br><span class="line"><span class="attribute">type</span>: <span class="string">&quot;tags&quot;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight apache"><table><tr><td class="code"><pre><span class="line"><span class="attribute">title</span>: 分类</span><br><span class="line"><span class="attribute">date</span>: <span class="number">2022</span>-<span class="number">02</span>-<span class="number">07</span> <span class="number">18</span>:<span class="number">54</span>:<span class="number">44</span></span><br><span class="line"><span class="attribute">type</span>: <span class="string">&quot;categories&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>注意：如果想要使用这几个功能是需要在写文章中标注的，例如：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">Hexo博客搭建及相关问题</span></span><br><span class="line"><span class="attr">categories:</span> <span class="string">博客搭建</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2022-02-08 11:53:52</span></span><br><span class="line"><span class="attr">tag:</span> </span><br><span class="line">	<span class="bullet">-</span> <span class="string">Hexo</span></span><br><span class="line">	<span class="bullet">-</span> <span class="string">博客搭建</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+]]></content>
+      <categories>
+        <category>博客搭建</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>博客搭建 - NexT</tag>
+      </tags>
+  </entry>
 </search>
